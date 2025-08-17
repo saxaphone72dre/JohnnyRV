@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JohnnyRV</title>
+  <meta name="description" content="JohnnyRV — Quiet RV park with full hookups, showers, and great outdoor access." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#">
+        <img src="images/logo.png" alt="JohnnyRV logo" class="logo-img" />
+        <span class="brand-text">JohnnyRV</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#rates">Sites & Rates</a></li>
+          <li><a href="#map">Map</a></li>
+          <li><a href="#contact">Contact / Book</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <h1>Welcome to JohnnyRV</h1>
+        <p>Comfortable RV camping with full hookups, clean facilities, and scenic views.</p>
+        <p class="hero-cta">
+          <a class="btn" href="#rates">View Rates</a>
+          <a class="btn btn-ghost" href="#contact">Request Booking</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="wrap about">
+      <h2>About JohnnyRV</h2>
+      <p>Open year-round and family-friendly. Enjoy quiet nights, friendly service, and nearby outdoor recreation.</p>
+      <ul class="quick-facts">
+        <li>50 RV sites (30/50 amp)</li>
+        <li>Full hookups & sewer</li>
+        <li>Restrooms & hot showers</li>
+        <li>Park-wide Wi‑Fi</li>
+      </ul>
+    </section>
+
+    <section id="amenities" class="wrap amenities">
+      <h2>Amenities</h2>
+      <div class="amenity-grid">
+        <div class="amenity">
+          <strong>Full Hookups</strong>
+          <p>Electrical, water, and sewer at each site.</p>
+        </div>
+        <div class="amenity">
+          <strong>Restrooms & Showers</strong>
+          <p>Clean facilities with hot water.</p>
+        </div>
+        <div class="amenity">
+          <strong>Wi‑Fi</strong>
+          <p>Complimentary Wi‑Fi across the park.</p>
+        </div>
+        <div class="amenity">
+          <strong>Pet Area</strong>
+          <p>Fenced area for dogs to run and play.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rates" class="wrap rates">
+      <h2>Sites & Rates</h2>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <h3>Standard Site</h3>
+          <p class="price">$40 / night</p>
+          <p>30 amp, water & sewer.</p>
+        </div>
+        <div class="rate-card">
+          <h3>Premium Site</h3>
+          <p class="price">$55 / night</p>
+          <p>50 amp, pull-through, close to amenities.</p>
+        </div>
+        <div class="rate-card">
+          <h3>Monthly</h3>
+          <p class="price">$700 / month</p>
+          <p>Discounted rates for extended stays.</p>
+        </div>
+      </div>
+      <p class="note">Holiday rates may vary. Use the booking form to request exact availability and pricing.</p>
+    </section>
+
+    <section id="map" class="wrap map-section">
+      <h2>Location</h2>
+      <p>Map placeholder. Replace the iframe below with your Google Maps or Leaflet embed once you want to show an exact location.</p>
+      <div class="map-wrap">
+        <!-- Replace src with your embed URL when ready -->
+        <iframe
+          title="JohnnyRV map"
+          src=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section class="wrap gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <!-- Add your images into images/ and update the src values -->
+        <img src="images/photo1.jpg" alt="Park photo 1" />
+        <img src="images/photo2.jpg" alt="Park photo 2" />
+        <img src="images/photo3.jpg" alt="Park photo 3" />
+      </div>
+    </section>
+
+    <section id="contact" class="wrap contact">
+      <h2>Contact & Booking</h2>
+      <div class="contact-grid">
+        <div>
+          <h3>Request a Booking</h3>
+          <p>Complete the form and we'll follow up to confirm availability. (Contact details intentionally left out — you'll add them later.)</p>
+        </div>
+
+        <form id="booking-form" class="booking-form" method="POST" action="#">
+          <!-- Update action to your form handler (Formspree, Netlify Forms, or your backend) when ready -->
+          <label>
+            Name
+            <input name="name" type="text" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required />
+          </label>
+          <label>
+            Phone (optional)
+            <input name="phone" type="tel" />
+          </label>
+          <label>
+            Arrival Date
+            <input name="arrival" type="date" required />
+          </label>
+          <label>
+            Nights
+            <input name="nights" type="number" min="1" value="1" />
+          </label>
+          <label>
+            Site Type
+            <select name="siteType">
+              <option>Standard</option>
+              <option>Premium</option>
+              <option>Monthly</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4"></textarea>
+          </label>
+          <p class="form-actions">
+            <button type="submit" class="btn">Request Booking</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; <span id="year"></span> JohnnyRV — All rights reserved.</p>
+      <p><small>Follow us on <a href="#" aria-label="Facebook">Facebook</a> &amp; <a href="#" aria-label="Instagram">Instagram</a></small></p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Campground",
+    "name":"JohnnyRV",
+    "url":"",
+    "description":"JohnnyRV — quiet RV park with full hookups and scenic views."
+  }
+  </script>
+</body>
+</html>
